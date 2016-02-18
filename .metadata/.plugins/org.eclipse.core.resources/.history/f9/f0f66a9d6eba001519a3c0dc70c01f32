@@ -1,0 +1,13 @@
+
+public class TV extends Product{
+
+	public static void main(String[] args) {
+		
+		public Product getOne( int id )
+		{
+			
+		}
+			
+	}
+
+}

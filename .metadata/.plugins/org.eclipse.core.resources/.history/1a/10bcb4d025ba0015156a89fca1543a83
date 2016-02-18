@@ -1,0 +1,23 @@
+
+public class Singleton {
+
+	private static Singleton eSingleton = null;
+	
+	private Singleton(){
+		
+	}
+	
+	public static Singleton getInstance(){
+		if ( eSingleton == null )
+		{
+			eSingleton = new Singleton();
+		}
+		return eSingleton;
+	}
+	
+	public static void main ( String[] args)
+	{
+		eSingleton.getInstance();
+	}
+	
+}

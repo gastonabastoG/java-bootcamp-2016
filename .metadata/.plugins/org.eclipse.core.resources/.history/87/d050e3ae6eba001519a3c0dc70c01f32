@@ -1,0 +1,12 @@
+
+public class TV extends Product{
+
+	
+		public Product getOne( int id )
+		{
+			return new TV();
+		}
+			
+	
+
+}

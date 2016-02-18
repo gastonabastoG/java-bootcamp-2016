@@ -1,0 +1,17 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public abstract class DBConnection {
+	
+	public abstract Book getOne( int id );
+	
+	public abstract Book[] GetAll ();
+	
+	public abstract void Update( Book a );
+	
+	public abstract void Insert( Book a );
+	
+	public abstract void Delete( int id );
+	
+}
