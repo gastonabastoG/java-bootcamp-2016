@@ -1,0 +1,20 @@
+package com.ejemplo.app;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	
+	public static String methodToTest(){
+		return "this will pass";
+	}
+	
+	
+	
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
