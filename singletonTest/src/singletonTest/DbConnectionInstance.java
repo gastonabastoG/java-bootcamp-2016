@@ -1,27 +1,22 @@
 package singletonTest;
 
-import java.util.logging.Logger;
 
 public class DbConnectionInstance {
-	
-	private String port;
-	
-	public String getPort() {
-		return port;
-	}
 
-	public void setPort(String port) {
-		this.port = port;
-	}
-
-	public DbConnectionInstance(String portNumber){
-		this.setPort(portNumber);
+	private static DbConnectionInstance instance = null;
+	
+	private DbConnectionInstance(){
 	}
 	
-	public static DbConnectionInstance getConnection(String portToSet){
-		Logger l = Logger.getLogger("test");
-		l.info("Connecting at port: "+portToSet);
-		return new DbConnectionInstance(portToSet);
+	public static DbConnectionInstance getConnection(){
+		if(instance == null){
+			return instance = new DbConnectionInstance();
+		}
+		return instance;
+	}
+	
+	public void talk(){
+		System.out.print("Hi, im a connection");
 	}
 	
 }
