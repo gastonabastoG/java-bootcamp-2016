@@ -7,10 +7,10 @@ public class ConnectionScopeFactory extends ConnectionFactory{
 	@Override
 	public ConnectionScope getScope(String scope){
 		
-		if(scope == "remote")
+		if(scope.equals("remote"))
 			return new RemoteConnection();
 		else
-			if(scope == "local")
+			if(scope.equals("local"))
 				return new LocalConnection();
 			else
 				return null;
