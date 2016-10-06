@@ -1,0 +1,14 @@
+package com.tom;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public List getRecentFiles(){
+    	List recentFiles = new ArrayList();
+    	recentFiles.add(1); 
+    }
+	
+}
