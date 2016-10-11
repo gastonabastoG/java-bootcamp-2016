@@ -18,8 +18,16 @@ public class App
 	}
 	
 	public static void addFile(String file){
-		files.add(file);
-		System.out.print("adding "+file);
+		
+		if(files.contains(file)){
+			files.remove(file);
+			files.add(0, file);
+		}
+		else{
+			files.add(0, file);
+		}
+		
+		//System.out.print("adding "+file);
 	}
 	
     public static void main( String[] args )

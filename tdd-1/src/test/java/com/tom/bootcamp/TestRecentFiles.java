@@ -41,5 +41,14 @@ public class TestRecentFiles {
 		
 			assertTrue(successfullyAdded);
 	}
+	
+	@Test
+	public void existingFile(){
+		App.addFile("file1");
+		App.addFile("file2");
+		//this should send file1 to the beggining of the list
+		App.addFile("file1");
+		assertTrue(App.listRecentFiles().get(0).equals("file1"));
+	}
 
 }
