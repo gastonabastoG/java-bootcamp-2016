@@ -17,7 +17,7 @@ public class App
 		return files;
 	}
 	
-	public static void addFile(String file){
+	public static void openFile(String file){
 		
 		if(files.contains(file)){
 			files.remove(file);

@@ -33,7 +33,7 @@ public class TestRecentFiles {
 	
 	@Test
 	public void openingFileTest() {
-		App.addFile("exampleFile");
+		App.openFile("exampleFile");
 		boolean successfullyAdded= false;
 		if(App.listRecentFiles().contains("exampleFile")){
 				successfullyAdded = true;
@@ -44,10 +44,10 @@ public class TestRecentFiles {
 	
 	@Test
 	public void existingFile(){
-		App.addFile("file1");
-		App.addFile("file2");
+		App.openFile("file1");
+		App.openFile("file2");
 		//this should send file1 to the beggining of the list
-		App.addFile("file1");
+		App.openFile("file1");
 		assertTrue(App.listRecentFiles().get(0).equals("file1"));
 	}
 
