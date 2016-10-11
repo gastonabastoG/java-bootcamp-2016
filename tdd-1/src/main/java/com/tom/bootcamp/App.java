@@ -13,7 +13,6 @@ public class App
 {
 	public static List<String> listRecentFiles(){
 		List<String> files = new ArrayList<String>();
-		files.add("annoyingFile");
 		return files;
 	}
 	
