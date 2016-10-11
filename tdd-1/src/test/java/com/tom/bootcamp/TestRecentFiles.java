@@ -31,5 +31,15 @@ public class TestRecentFiles {
 		assertTrue(App.listRecentFiles().isEmpty());
 	}
 	
+	@Test
+	public void openingFileTest() {
+		App.addFile("exampleFile");
+		boolean successfullyAdded= false;
+		if(App.listRecentFiles().contains("exampleFile")){
+				successfullyAdded = true;
+			}
+		
+			assertTrue(successfullyAdded);
+	}
 
 }

@@ -11,9 +11,15 @@ import java.util.ArrayList;
  */
 public class App 
 {
+	private static List<String> files = new ArrayList<String>();
 	public static List<String> listRecentFiles(){
-		List<String> files = new ArrayList<String>();
+
 		return files;
+	}
+	
+	public static void addFile(String file){
+		files.add(file);
+		System.out.print("adding "+file);
 	}
 	
     public static void main( String[] args )
