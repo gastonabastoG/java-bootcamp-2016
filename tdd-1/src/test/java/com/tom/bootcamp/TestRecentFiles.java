@@ -26,12 +26,10 @@ public class TestRecentFiles {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void firstRunEmptyness() {
+	public void firstRunEmptyness() {		
 		assertTrue(App.listRecentFiles().isEmpty());
 	}
 	
-	@Test
 	public void openingFileTest() {
 		App.openFile("exampleFile");
 		boolean successfullyAdded= false;
@@ -42,7 +40,6 @@ public class TestRecentFiles {
 			assertTrue(successfullyAdded);
 	}
 	
-	@Test
 	public void existingFile(){
 		App.openFile("file1");
 		App.openFile("file2");
@@ -51,7 +48,6 @@ public class TestRecentFiles {
 		assertTrue(App.listRecentFiles().get(0).equals("file1"));
 	}
 	
-	@Test
 	public void removesLastFile() {
 		for(Integer i = 0 ; i<15 ; i++){
 			App.openFile("file"+i.toString());
@@ -60,4 +56,13 @@ public class TestRecentFiles {
 		App.openFile("thisFile");
 		assertTrue(!App.listRecentFiles().get(14).equals(lastFile));
 	}
+	
+	@Test
+	public void testsOrder(){
+		firstRunEmptyness();
+		openingFileTest();
+		existingFile();
+		removesLastFile();
+	}
+	
 }
