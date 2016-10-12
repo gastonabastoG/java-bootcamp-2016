@@ -32,4 +32,10 @@ public class BlogTest {
 		assertTrue(Blog.getEntries().contains("This is an example"));
 	}
 
+	@Test
+	public void CanDelete() {
+		Blog.postEntry("example");
+		Blog.deleteEntry(1);
+		assertTrue(!Blog.getEntries().contains("example"));
+	}
 }
