@@ -20,4 +20,13 @@ public class Blog {
 		blogEntries.remove(element);
 	}
 	
+	public static List<String> getRecentEntries(){
+		List<String> recentEntries = new ArrayList<String>();
+		for(Integer i=1;i<=10;i++){
+			recentEntries.add(Blog.getEntries().get(i));
+		}
+		
+		return recentEntries;
+	}
+	
 }

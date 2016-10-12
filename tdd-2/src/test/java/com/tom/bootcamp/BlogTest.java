@@ -12,6 +12,9 @@ public class BlogTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		for(Integer i=0;i<=10;i++){
+			Blog.postEntry("entry"+i.toString());
+		}
 	}
 
 	@Test
@@ -25,6 +28,11 @@ public class BlogTest {
 		Blog.postEntry("example");
 		Blog.deleteEntry("example");
 		assertTrue(!Blog.getEntries().contains("example"));
+	}
+	
+	@Test
+	public void CanList() {
+		assertTrue(Blog.getRecentEntries().size()== 10 || Blog.getRecentEntries().size()== Blog.getEntries().size());
 	}
 	
 }
