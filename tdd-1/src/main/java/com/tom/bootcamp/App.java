@@ -11,7 +11,9 @@ import java.util.ArrayList;
  */
 public class App 
 {
-	private static List<String> files = new ArrayList<String>();
+
+	private static List<String> files = new ArrayList<String>(15);
+	
 	public static List<String> listRecentFiles(){
 
 		return files;

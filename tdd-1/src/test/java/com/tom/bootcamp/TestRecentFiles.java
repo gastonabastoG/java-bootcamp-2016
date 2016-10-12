@@ -50,5 +50,14 @@ public class TestRecentFiles {
 		App.openFile("file1");
 		assertTrue(App.listRecentFiles().get(0).equals("file1"));
 	}
-
+	
+	@Test
+	public void removesLastFile() {
+		for(Integer i = 0 ; i<15 ; i++){
+			App.openFile("file"+i.toString());
+		}
+		String lastFile = App.listRecentFiles().get(14);
+		App.openFile("thisFile");
+		assertTrue(!App.listRecentFiles().get(14).equals(lastFile));
+	}
 }
