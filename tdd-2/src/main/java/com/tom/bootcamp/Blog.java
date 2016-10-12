@@ -10,17 +10,14 @@ public class Blog {
 	public static List<String> getEntries(){
 		return blogEntries;
 	}
-	public static String getEntry(int index){
-		return blogEntries.get(index);
-	}
 	
 	public static void postEntry(String entry){
 		blogEntries.add(entry);
 	}
 	
 	
-	public static void deleteEntry(int index){
-		blogEntries.remove(index);
+	public static void deleteEntry(String element){
+		blogEntries.remove(element);
 	}
-
+	
 }
