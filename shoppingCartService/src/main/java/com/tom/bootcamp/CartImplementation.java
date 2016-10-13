@@ -12,18 +12,17 @@ public class CartImplementation implements CartService{
 	}
 
 	public void deleteFromCart(int index) {
-		// TODO Auto-generated method stub
-		
+		cartItems.remove(index);
 	}
 
 	public List<String> listCart() {
-		// TODO Auto-generated method stub
 		return cartItems;
 	}
 
 	public void finishBuy() {
-		// TODO Auto-generated method stub
-		
+		// this method should have the business logic such as currencies movement
+		System.out.println("Buy accomplished");
+		cartItems.clear();
 	}
 
 }
