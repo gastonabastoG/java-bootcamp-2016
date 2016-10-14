@@ -23,8 +23,23 @@ public class UsersServiceImplementation implements UsersService{
 	}
 
 	public void updateUser(String username, String newUsername, String newPassword) {
-		// TODO Auto-generated method stub
-		
+		User userFound = null;
+		Integer index = null;
+		for (User user : usersList)
+			if(user.username.equals(username)){
+				userFound = user;
+				index = usersList.indexOf(user);
+			}
+		if(userFound != null){
+			
+			if(newPassword != null){
+				userFound.setPassword(newPassword);
+			}
+			if(newUsername != null){
+				userFound.setUsername(newUsername);
+			}
+		}
+		usersList.set(index, userFound);
 	}
 
 	public User getUser(String username) {
