@@ -14,8 +14,12 @@ public class UsersServiceImplementation implements UsersService{
 	}
 
 	public void deleteUser(String username) {
-		// TODO Auto-generated method stub
-		
+		User userFound = null;
+		for (User user : usersList)
+			if(user.username.equals(username)){
+				userFound = user;
+			}
+			usersList.remove(userFound);
 	}
 
 	public void updateUser(String username, String newUsername, String newPassword) {

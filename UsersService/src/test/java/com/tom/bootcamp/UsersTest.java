@@ -15,5 +15,12 @@ public class UsersTest {
 		User userToGet = imp.getUser("test");
 		assertTrue(userToGet.getPassword().equals("testPassword") && userToGet.getUsername().equals("test"));
 	}
+	
+	@Test
+	public void canDelete(){
+		imp.createUser("userToDelete", "password");
+		imp.deleteUser("userToDelete");
+		assertTrue(imp.getUser("userToDelete") == null);
+	}
 
 }
