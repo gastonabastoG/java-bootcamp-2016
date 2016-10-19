@@ -1,0 +1,30 @@
+create database high_school;
+
+create table students(
+registration_number int not null auto_increment primary key,
+last_name char(20),
+first_name char(20),
+birth_date date
+);
+
+create table teachers(
+id int not null auto_increment primary key,
+last_name char(20),
+first_name char(20),
+birth_date date
+);
+
+create table courses(
+id int not null auto_increment primary key,
+name char(20),
+teacher int,
+hours_week int,
+CONSTRAINT FOREIGN KEY (teacher) REFERENCES teachers(id)
+);
+
+create table student-course(
+student int,
+course int,
+foreign key (student) references students (registration_number),
+foreign key (course) references courses(id)
+);
