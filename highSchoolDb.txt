@@ -22,9 +22,9 @@ hours_week int,
 CONSTRAINT FOREIGN KEY (teacher) REFERENCES teachers(id)
 );
 
-create table student-course(
+create table studentcourseRelation(
 student int,
-course int,
-foreign key (student) references students (registration_number),
+course int, 
+foreign key (student) references students(registration_number),
 foreign key (course) references courses(id)
 );
