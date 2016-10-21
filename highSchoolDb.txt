@@ -22,9 +22,380 @@ hours_week int,
 CONSTRAINT FOREIGN KEY (teacher) REFERENCES teachers(id)
 );
 
-create table student-course(
+create table studentcourseRelation(
 student int,
 course int,
+first_note int,
+second_note int,
+third_note int,
+final_note int,
 foreign key (student) references students (registration_number),
 foreign key (course) references courses(id)
 );
+
+create table schedules(
+id int primary key not null auto_increment,
+start_time time,
+finish_time time
+course int,
+foreign key (course) references courses(id)
+);
+
+create table teacherschedules(
+schedule int,
+teacher int,
+foreign key (schedule) references schedules(id),
+foreign key (teacher) references teachers(id)
+);
+
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'doe',
+'john',
+'1985-04-4'
+);
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'Pierantoni',
+'Tomas',
+'1996-03-21'
+);
+
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'Aiup',
+'Julian',
+'1994-02-19'
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'Javascript',
+(select id from teachers where id=3),
+8
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'OOP',
+(select id from teachers where id=2),
+6
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'Agile methodology',
+(select id from teachers where id=1),
+6
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido1',
+'nombre1',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido2',
+'nombre2',
+'1998-04-4'
+);
+
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido3',
+'nombre3',
+'1998-04-4'
+);
+
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido4',
+'nombre4',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido5',
+'nombre5',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido6',
+'nombre6',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido7',
+'nombre7',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido8',
+'nombre8',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido9',
+'nombre9',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido10',
+'nombre10',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido11',
+'nombre11',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido12',
+'nombre12',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido13',
+'nombre13',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido14',
+'nombre14',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido15',
+'nombre15',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido16',
+'nombre16',
+'1982-08-14'
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=2),
+(select id from courses where id=1)
+);
+
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=2),
+(select id from courses where id=1)
+);
+
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=3),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=5),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=9),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=15),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=14),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=12),
+(select id from courses where id=1)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=12),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=16),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=5),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=6),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=7),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=8),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=9),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=10),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=4),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=3),
+(select id from courses where id=2)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=12),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=1),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=16),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=15),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=14),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=13),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=12),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=11),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=7),
+(select id from courses where id=3)
+);
+
+insert into studentcourseRelation (student, course)
+values(
+(select registration_number from students where registration_number=2),
+(select id from courses where id=3)
+);
+
+
+/* gets the name of the course to show*/
+select name 'Course' from courses where id=1;
+
+/* gets the teacher for the selected course*/
+select concat_ws("", last_name, ",", first_name) 'Teacher' from teachers where id=(select teacher from courses where id=1);
+
+/* gets the students signed up for the selected course*/
+select concat_ws("",students.last_name,", ",students.first_name) 'Students' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number;
+
+/* students that passed an exam*/
+
+select concat_ws("",students.last_name,", ",students.first_name) 'Passed' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number where thiscourse.final_note >= 6;
+
+/* students that failed an exam*/
+select concat_ws("",students.last_name,", ",students.first_name) 'Passed' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number where thiscourse.final_note < 6;
+
+/*get the teacher */
+select concat_ws("",last_name,", ",first_name) 'Teacher' from teachers where id=1;
+
+/* get the teacher schedule*/
+
+select concat_ws("", start_time ," - ",finish_time) 'Schedules' from teacherschedules inner join schedules on teacherschedules.teacher=teacher where teacher=1;
