@@ -1,0 +1,25 @@
+package com.tom.bootcamp;
+
+
+
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	public static List<String> listRecentFiles(){
+		List<String> filesList = new ArrayList<String>();
+		filesList.add("annoyingFile");
+		return filesList;
+	}
+	
+    public static void main( String[] args )
+    {
+    	boolean largo = listRecentFiles().isEmpty();
+        System.out.println( largo );
+    }
+}
