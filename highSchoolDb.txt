@@ -377,6 +377,15 @@ values(
 );
 
 
+/* add schedules and relate them to a teacher to test*/
+
+insert into schedules (finish_time, start_time) values ('16:00', '17:00');
+insert into schedules (finish_time, start_time) values ('18:00', '19:00');
+
+insert into teacherschedules (schedule, teacher) values (1, 1);
+insert into teacherschedules (schedule, teacher) values (2, 1);
+
+
 /* gets the name of the course to show*/
 select name 'Course' from courses where id=1;
 
