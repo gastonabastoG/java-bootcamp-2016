@@ -24,11 +24,12 @@ CONSTRAINT FOREIGN KEY (teacher) REFERENCES teachers(id)
 
 create table studentcourseRelation(
 student int,
+<<<<<<< HEAD
 course int,
 first_note int,
 second_note int,
 third_note int,
-final_note int,
+final_note int, 
 foreign key (student) references students (registration_number),
 foreign key (course) references courses(id)
 );
