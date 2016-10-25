@@ -33,7 +33,7 @@ public class Ex05 {
 				startHour = result.getTime("schudele.startHour");
 				finishHour = result.getTime("schudele.finishHour");
 				
-				System.out.println("name :"+ name +" last name: "+ lastName+ " course: "+ course+ " day: "+ day +"start hour " + startHour+ "finish hour: "+ finishHour  );
+				System.out.println("name :"+ name +" last name: "+ lastName+ " course: "+ course+ " day: "+ day +"start hour " + startHour+ " finish hour: "+ finishHour  );
 				
 				}
 			

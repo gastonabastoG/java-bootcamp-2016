@@ -37,3 +37,5 @@ topic 4/topic4/.project
 topic 4/topic4/.settings/org.eclipse.core.resources.prefs
 topic 4/topic4/.settings/org.eclipse.jdt.core.prefs
 topic 4/topic4/.settings/org.eclipse.m2e.core.prefs
+topic 4/.recommenders/caches/identified-project-coordinates.json
+topic 4/.recommenders/caches/manual-mappings.json
