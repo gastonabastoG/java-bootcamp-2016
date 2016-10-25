@@ -1,0 +1,375 @@
+exersice 1
+
+create database highschool;
+
+CREATE TABLE `highschool`.`student` (
+  `idstudent` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `lastName` VARCHAR(45) NULL,
+  `birthDate` date NULL,
+  PRIMARY KEY (`idstudent`));
+
+
+CREATE TABLE `highschool`.`teacher` (
+  `idteacher` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `lastName` VARCHAR(45) NULL,
+  `birthDate` DATE NULL,
+  PRIMARY KEY (`idteacher`));
+
+CREATE TABLE `highschool`.`course` (
+  `idcourse` INT NOT NULL,
+  `idteacher` INT NULL,
+  `hours` INT NULL,
+ `name` VARCHAR(45) NULL,  PRIMARY KEY (`idcourse`));
+
+
+CREATE TABLE `highschool`.`courseline` (
+  `idCourseLine` INT NOT NULL,
+  `idCourse` INT NULL,
+  `idStudent` INT NULL,
+  PRIMARY KEY (`idCourseLine`));
+
+
+CREATE TABLE `highschool`.`schudele` (
+  `idschudele` INT NOT NULL,
+  `day` VARCHAR(45) NULL,
+  `startHour` DATETIME NULL,
+  `finishHour` DATETIME NULL,
+`idcourse` INT NULL ,  PRIMARY KEY (`idschudele`));
+
+
+CREATE TABLE `highschool`.`notes` (
+  
+  `idStudent` INT NULL,
+  `first` INT NULL,
+  `second` INT NULL,
+  `third` INT NULL,
+  PRIMARY KEY (`idStudent`));
+
+______________________________________________________________________________________________________________________________________
+exersice 2
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('1', 'name1', 'last1', '1990/01/01');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('2', 'name2', 'last2', '1990/01/02');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('3', 'name3', 'last3', '1990/01/03');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('4', 'name4', 'last4', '1990/01/04');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('5', 'name5', 'last5', '1990/01/05');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('6', 'name6', 'last6', '1990/01/06');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('7', 'name7', 'last7', '1990/01/07');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('8', 'name8', 'last8', '1990/01/08');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('9', 'name9', 'last9', '1990/01/09');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('10', 'name10', 'last10', '1990/01/10');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('11', 'name11', 'last11', '1990/01/11');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('12', 'name12', 'last12', '1990/01/12');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('13', 'name13', 'last13', '1990/01/13');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('14', 'name14', 'last14', '1990/01/14');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('15', 'name15', 'last15', '1990/01/15');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('16', 'name16', 'last16', '1990/01/16');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('17', 'name17', 'last17', '1990/01/17');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('18', 'name18', 'last18', '1990/01/18');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('19', 'name19', 'last19', '1990/01/19');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('20', 'name20', 'last20', '1990/01/20');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('21', 'name21', 'last21', '1990/01/21');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('22', 'name22', 'last22', '1990/01/22');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('23', 'name23', 'last23', '1990/01/23');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('24', 'name24', 'last24', '1990/01/24');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('25', 'name25', 'last25', '1990/01/25');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('26', 'name26', 'last26', '1990/01/26');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('27', 'name27', 'last27', '1990/01/27');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('28', 'name28', 'last28', '1990/01/28');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('29', 'name29', 'last29', '1990/01/29');
+
+INSERT INTO `highschool`.`student` (`idstudent`, `name`, `lastName`, `birthDate`) VALUES ('30', 'name 30', 'last30', '1990/01/30');
+
+
+
+INSERT INTO `highschool`.`teacher` (`idteacher`, `name`, `lastName`, `birthDate`) VALUES ('1', 'marta', 'mestre', '1970/01/01');
+
+INSERT INTO `highschool`.`teacher` (`idteacher`, `name`, `lastName`, `birthDate`) VALUES ('2', 'luis ', 'paris', '1970/01/02');
+
+INSERT INTO `highschool`.`teacher` (`idteacher`, `name`, `lastName`, `birthDate`) VALUES ('3', 'santos', 'ortis', '1970/01/03');
+
+
+
+INSERT INTO `highschool`.`course` (`idcourse`, `idteacher`, `hours`, `name`) VALUES ('1', '1', '10', 'math');
+
+INSERT INTO `highschool`.`course` (`idcourse`, `idteacher`, `hours`, `name`) VALUES ('2', '2', '6', 'history');
+
+INSERT INTO `highschool`.`course` (`idcourse`, `idteacher`, `hours`, `name`) VALUES ('3', '3', '6', 'science');
+
+
+INSERT INTO `highschool`.`schudele` (`idschudele`, `day`, `startHour`, `finishHour`, `idcourse`) VALUES ('1', 'monday', '09:00', '15:00', '1');
+
+INSERT INTO `highschool`.`schudele` (`idschudele`, `day`, `startHour`, `finishHour`, `idcourse`) VALUES ('2', 'tuesday', '09:00', '13:00', '1');
+
+INSERT INTO `highschool`.`schudele` (`idschudele`, `day`, `startHour`, `finishHour`, `idcourse`) VALUES ('3', 'wednesday', '09:00', '12:00', '2');
+
+INSERT INTO `highschool`.`schudele` (`idschudele`, `day`, `startHour`, `finishHour`, `idcourse`) VALUES ('4', 'thursday', '09:00', '12:00', '2');
+
+INSERT INTO `highschool`.`schudele` (`idschudele`, `day`, `startHour`, `finishHour`, `idcourse`) VALUES ('5', 'friday', '09:00', '15:00', '3');
+
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('1', '1', '10', '5');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('2', '2', '9', '9');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('3', '3', '8', '1');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('4', '4', '7', '3');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('5', '5', '6', '4');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('6', '6', '5', '8');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('7', '7', '4', '9');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('8', '8', '3', '7');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('9', '9', '2', '5');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('10', '10', '1', '2');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('11', '1', '10', '1');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('12', '2', '9', '7');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('13', '3', '8', '9');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('14', '4', '7', '6');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('15', '5', '6', '4');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('16', '6', '5', '8');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('17', '7', '4', '9');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('18', '8', '3', '7');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('19', '9', '2', '4');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('20', '10', '1', '1');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('21', '1', '10', '2');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('22', '2', '9', '8');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('23', '3', '8', '3');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('24', '4', '7', '8');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('25', '5', '6', '7');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('26', '6', '5', '9');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('27', '7', '4', '10');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('28', '8', '3', '8');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('29', '9', '2', '5');
+
+INSERT INTO `highschool`.`notes` (`idStudent`, `first`, `second`, `third`) VALUES ('30', '10', '1', '10');
+
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('1', '1', '1');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('2', '1', '2');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('3', '1', '3');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('4', '1', '4');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('5', '1', '5');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('6', '1', '6');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('7', '1', '7');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('8', '1', '8');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('9', '1', '9');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('10', '1', '10');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('11', '2', '11');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('12', '2', '12');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('13', '2', '13');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('14', '2', '14');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('15', '2', '15');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('16', '2', '16');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('17', '2', '17');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('18', '2', '18');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('19', '2', '19');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('20', '2', '20');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('21', '3', '21');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('22', '3', '22');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('23', '3', '23');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('24', '3', '24');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('25', '3', '25');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('26', '3', '26');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('27', '3', '27');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('28', '3', '28');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('29', '3', '29');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('30', '3', '30');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('31', '1', '1');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('32', '2', '2');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('33', '3', '3');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('34', '1', '4');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('35', '2', '5');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('36', '3', '6');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('37', '1', '7');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('38', '2', '8');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('39', '3', '9');
+
+INSERT INTO `highschool`.`courseline` (`idCourseLine`, `idCourse`, `idStudent`) VALUES ('40', '1', '10');
+
+
+
+___________________________________________________________________________________________________________________________
+exersice 3
+
+select teacher.name, teacher.lastName ,course.name, student.name, student.lastName 
+from course 
+
+inner join teacher on course.idcourse = teacher.idteacher 
+inner join courseline on courseline.idCourse =course.idcourse 
+
+inner join student on courseline.idStudent = student.idstudent 
+order by student.lastName;   
+__________________________________________________________________________________________________________________________
+exersice 4
+
+ALTER TABLE `highschool`.`notes` 
+ADD COLUMN `final` INT NULL AFTER `third`;
+
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='1';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='2';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='3';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='4';
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='5';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='6';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='7';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='8';
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='9';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='10';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='11';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='12';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='13';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='14';
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='15';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='16';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='17';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='18';
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='19';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='20';
+
+UPDATE `highschool`.`notes` SET `final`='4' WHERE `idStudent`='21';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='22';
+
+UPDATE `highschool`.`notes` SET `final`='5' WHERE `idStudent`='23';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='24';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='25';
+
+UPDATE `highschool`.`notes` SET `final`='7' WHERE `idStudent`='26';
+
+UPDATE `highschool`.`notes` SET `final`='7' WHERE `idStudent`='27';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='28';
+
+UPDATE `highschool`.`notes` SET `final`='6' WHERE `idStudent`='29';
+
+UPDATE `highschool`.`notes` SET `final`='7' WHERE `idStudent`='30';
+
+
+
+___________________________________________________________________________________________________________________
+exersice 5
+
+select teacher.name, teacher.lastName ,course.name, schudele.day,schudele.startHour, schudele.finishHour 
+from course 
+inner join teacher on course.idcourse = teacher.idteacher 
+inner join schudele on schudele.idschudele =course.idcourse;
+
+
+
+
+
