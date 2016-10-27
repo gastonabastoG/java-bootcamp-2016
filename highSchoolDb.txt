@@ -1,0 +1,411 @@
+create database high_school;
+
+create table students(
+registration_number int not null auto_increment primary key,
+last_name char(20),
+first_name char(20),
+birth_date date
+);
+
+create table teachers(
+id int not null auto_increment primary key,
+last_name char(20),
+first_name char(20),
+birth_date date
+);
+
+create table courses(
+id int not null auto_increment primary key,
+name char(20),
+teacher int,
+hours_week int,
+CONSTRAINT FOREIGN KEY (teacher) REFERENCES teachers(id)
+);
+
+create table studentcourseRelation(
+student int,
+<<<<<<< HEAD
+course int,
+first_note int,
+second_note int,
+third_note int,
+final_note int, 
+foreign key (student) references students (registration_number),
+foreign key (course) references courses(id)
+);
+
+create table schedules(
+id int primary key not null auto_increment,
+start_time time,
+finish_time time
+course int,
+foreign key (course) references courses(id)
+);
+
+create table teacherschedules(
+schedule int,
+teacher int,
+foreign key (schedule) references schedules(id),
+foreign key (teacher) references teachers(id)
+);
+
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'doe',
+'john',
+'1985-04-4'
+);
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'Pierantoni',
+'Tomas',
+'1996-03-21'
+);
+
+
+insert into teachers ( last_name, first_name , birth_date)
+values(
+'Aiup',
+'Julian',
+'1994-02-19'
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'Javascript',
+3,
+8
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'OOP',
+2,
+6
+);
+
+insert into courses (name, teacher, hours_week)
+values(
+'Agile methodology',
+1,
+6
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido1',
+'nombre1',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido2',
+'nombre2',
+'1998-04-4'
+);
+
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido3',
+'nombre3',
+'1998-04-4'
+);
+
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido4',
+'nombre4',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido5',
+'nombre5',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido6',
+'nombre6',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido7',
+'nombre7',
+'1998-04-4'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido8',
+'nombre8',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido9',
+'nombre9',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido10',
+'nombre10',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido11',
+'nombre11',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido12',
+'nombre12',
+'1978-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido13',
+'nombre13',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido14',
+'nombre14',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido15',
+'nombre15',
+'1982-08-14'
+);
+
+insert into students ( last_name, first_name , birth_date)
+values(
+'apellido16',
+'nombre16',
+'1982-08-14'
+);
+
+insert into studentcourseRelation (student, course)
+values(
+2,
+1
+);
+
+
+insert into studentcourseRelation (student, course)
+values(
+2,
+1
+);
+
+
+insert into studentcourseRelation (student, course)
+values(
+3,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+5,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+9,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+15,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+14,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+12,
+1
+);
+
+insert into studentcourseRelation (student, course)
+values(
+12,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+16,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+5,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+6,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+7,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+8,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+9,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+10,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+4,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+3,
+2
+);
+
+insert into studentcourseRelation (student, course)
+values(
+12,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+1,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+16,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+15,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+14,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+13,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+12,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+11,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+7,
+3
+);
+
+insert into studentcourseRelation (student, course)
+values(
+2,
+3
+);
+
+
+/* add schedules and relate them to a teacher to test*/
+
+insert into schedules (finish_time, start_time) values ('16:00', '17:00');
+insert into schedules (finish_time, start_time) values ('18:00', '19:00');
+
+insert into teacherschedules (schedule, teacher) values (1, 1);
+insert into teacherschedules (schedule, teacher) values (2, 1);
+
+
+/* gets the name of the course to show*/
+select name 'Course' from courses where id=1;
+
+/* gets the teacher for the selected course*/
+select concat_ws("", last_name, ",", first_name) 'Teacher' from teachers where id=(select teacher from courses where id=1);
+
+/* gets the students signed up for the selected course*/
+select concat_ws("",students.last_name,", ",students.first_name) 'Students' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number;
+
+/* students that passed an exam*/
+
+select concat_ws("",students.last_name,", ",students.first_name) 'Passed' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number where thiscourse.final_note >= 6;
+
+/* students that failed an exam*/
+select concat_ws("",students.last_name,", ",students.first_name) 'Passed' from (select * from studentcourserelation where course=1) as thiscourse inner join students on thiscourse.student=students.registration_number where thiscourse.final_note < 6;
+
+/*get the teacher */
+select concat_ws("",last_name,", ",first_name) 'Teacher' from teachers where id=1;
+
+/* get the teacher schedule*/
+
+select concat_ws("", start_time ," - ",finish_time) 'Schedules' from teacherschedules inner join schedules on teacherschedules.teacher=teacher where teacher=1;
