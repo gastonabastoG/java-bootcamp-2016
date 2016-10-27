@@ -75,21 +75,21 @@ values(
 insert into courses (name, teacher, hours_week)
 values(
 'Javascript',
-(select id from teachers where id=3),
+3,
 8
 );
 
 insert into courses (name, teacher, hours_week)
 values(
 'OOP',
-(select id from teachers where id=2),
+2,
 6
 );
 
 insert into courses (name, teacher, hours_week)
 values(
 'Agile methodology',
-(select id from teachers where id=1),
+1,
 6
 );
 
@@ -209,172 +209,172 @@ values(
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=2),
-(select id from courses where id=1)
+2,
+1
 );
 
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=2),
-(select id from courses where id=1)
+2,
+1
 );
 
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=3),
-(select id from courses where id=1)
+3,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=5),
-(select id from courses where id=1)
+5,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=9),
-(select id from courses where id=1)
+9,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=15),
-(select id from courses where id=1)
+15,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=14),
-(select id from courses where id=1)
+14,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=12),
-(select id from courses where id=1)
+12,
+1
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=12),
-(select id from courses where id=2)
+12,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=16),
-(select id from courses where id=2)
+16,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=5),
-(select id from courses where id=2)
+5,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=6),
-(select id from courses where id=2)
+6,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=7),
-(select id from courses where id=2)
+7,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=8),
-(select id from courses where id=2)
+8,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=9),
-(select id from courses where id=2)
+9,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=10),
-(select id from courses where id=2)
+10,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=4),
-(select id from courses where id=2)
+4,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=3),
-(select id from courses where id=2)
+3,
+2
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=12),
-(select id from courses where id=3)
+12,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=1),
-(select id from courses where id=3)
+1,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=16),
-(select id from courses where id=3)
+16,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=15),
-(select id from courses where id=3)
+15,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=14),
-(select id from courses where id=3)
+14,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=13),
-(select id from courses where id=3)
+13,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=12),
-(select id from courses where id=3)
+12,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=11),
-(select id from courses where id=3)
+11,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=7),
-(select id from courses where id=3)
+7,
+3
 );
 
 insert into studentcourseRelation (student, course)
 values(
-(select registration_number from students where registration_number=2),
-(select id from courses where id=3)
+2,
+3
 );
 
 
