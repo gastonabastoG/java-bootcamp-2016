@@ -27,12 +27,14 @@ public class UserController {
 	public String createUser(@RequestBody Map<String, String> userData) throws NoSuchAlgorithmException{
 		String password = null, username = null;
 		for(Entry<String, String> entry : userData.entrySet()){
-			switch (entry.getKey()){
-			case "password": password = entry.getValue().toString();
-			break;
-			case "username": username = entry.getValue().toString();
-			break;
-					}
+			
+			if(entry.getKey().equals("password")){
+				password = entry.getValue().toString();
+			}else {
+				if(entry.getKey().equals("username")){
+					username = entry.getValue().toString();
+				}
+			}
 		}
 		User user = new User(username, password);
 		userDAO.save(user);
