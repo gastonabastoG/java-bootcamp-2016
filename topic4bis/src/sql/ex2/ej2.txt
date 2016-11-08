@@ -1,0 +1,59 @@
+insert into student (name, lastName, sId, birth)
+values
+('ROsa','Moran', '105','1996/08/20');
+
+
+insert into course (name, tId, hour, cId, days)
+values
+('Ingles', '1000','1400','01','Monday');
+
+
+insert into course (name, tId, hour, cId, days)
+values
+('Dibujo', '1001','1700','02','Tuesday');
+
+
+insert into course (name, tId, hour, cId, days)
+values
+('Ciencias', '1002','1530','03','Wednesday');
+
+
+insert into teacher (name, lastName, tId, birth)
+values
+('Marinao', 'Cazas', '1000', '1980-05-28');
+
+
+insert into teacher (name, lastName, tId, birth)
+values
+('Juan', 'Perez', '1001', '1974-11-25');
+
+
+insert into teacher (name, lastName, tId, birth)
+values
+('Pedro', 'Sarnel', '1002', '1987-11-08');
+
+
+insert into list2 (sId,tId,cId,nota1,listId, notaFinal)
+values
+('203','1000','02','8','110','4');
+
+
+insert into list2 (sId,tId,cId,nota1,listId, notaFinal)
+values
+('207','1001','01','7','120', '7');
+
+
+insert into list2 (sId,tId,cId,nota1,listId, notaFinal)
+values
+('203','1001','01','4','130','6');
+
+
+insert into list2 (sId,tId,cId,nota1,listId, notaFinal)
+values
+('400','1001','01','2','140','10');
+
+
+insert into list2 (sId,tId,cId,nota1,listId, notaFinal)
+values
+('400','1002','03','10','150', '5');
+

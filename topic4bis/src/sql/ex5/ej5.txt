@@ -1,0 +1,13 @@
+select (teacher.name)tName, (teacher.lastName)teacher, (course.name)course, (course.hour)time, (course.days)days
+from course
+inner join teacher on teacher.tId = course.tId
+order by days;
++---------+---------+----------+----------+-----------+
+| tName   | teacher | course   | time     | days      |
++---------+---------+----------+----------+-----------+
+| Mariano | Cazas   | Ingles   | 00:14:00 | Monday    |
+| Juan    | Perez   | Dibujo   | 00:17:00 | Tuesday   |
+| Pedro   | Sarnel  | Ciencias | 00:15:30 | Wednesday |
++---------+---------+----------+----------+-----------+
+3 rows in set (0.03 sec)
+

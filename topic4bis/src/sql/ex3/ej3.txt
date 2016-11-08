@@ -1,0 +1,29 @@
+
+
+CURSO 1
+
+select (course.name)course ,(teacher.lastName)teacher, (teacher.name)tName, (student.lastName)student, (student.name)sName
+from student
+inner join list2 on student.sId = list2.sId
+inner join course on list2.cId = course.cId
+inner join teacher on course.tId = teacher.tId
+where course.cId = 1
+order by student.lastName;
+
+CURSO 2 
+select (course.name)course ,(teacher.lastName)teacher, (teacher.name)tName, (student.lastName)student, (student.name)sName
+from student
+inner join list2 on student.sId = list2.sId
+inner join course on list2.cId = course.cId
+inner join teacher on course.tId = teacher.tId
+where course.cId = 2
+order by student.lastName;
+
+CURSO 3
+select (course.name)course ,(teacher.lastName)teacher, (teacher.name)tName, (student.lastName)student, (student.name)sName
+from student
+inner join list2 on student.sId = list2.sId
+inner join course on list2.cId = course.cId
+inner join teacher on course.tId = teacher.tId
+where course.cId = 3
+order by student.lastName;

@@ -1,0 +1,7 @@
+SELECT count(*)/(SELECT count(*) FROM list2 WHERE cId=1)*100 
+'Passed'
+FROM list2 where cId=1 and notaFinal>=6; 
+
+SELECT count(*)/(SELECT count(*) FROM list2 WHERE cId=1)*100 
+'Not passed'
+FROM list2 where cId=1 and notaFinal<6;

@@ -1,0 +1,45 @@
+
+CREATE TABLE student (
+ name varchar(8) DEFAULT NULL,
+ lastName varchar(10) DEFAULT NULL,
+ sId int(11) NOT NULL,
+ birth date DEFAULT NULL,
+ PRIMARY KEY (sId));
+
+
+ CREATE TABLE teacher (
+ name varchar(8) NOT NULL,
+ lastName varchar(10) NOT NULL,
+ tId int(11) NOT NULL,
+ birth date DEFAULT NULL,
+ PRIMARY KEY (tId));
+
+ CREATE TABLE course (
+ name varchar(10) DEFAULT NULL,
+ tId int(11) DEFAULT NULL,
+ hour time DEFAULT NULL,
+ cId int(11) NOT NULL,
+ note1 int(11) NOT NULL,
+ note2 int(11) NOT NULL,
+ note3 int(11) NOT NULL,
+ PRIMARY KEY (cId),
+ KEY tId (tId),
+ CONSTRAINT course_ibfk_1 FOREIGN KEY (tId) REFERENCES teacher (tId),
+ CONSTRAINT course_ibfk_2 FOREIGN KEY (tId) REFERENCES teacher (tId));
+
+CREATE TABLE list2 (
+listId int(11) NOT NULL,
+sId int(11) NOT NULL,
+cId int(11) NOT NULL,
+tId int(11) NOT NULL,
+nota1 int(11) NOT NULL,
+nota2 int(11) NOT NULL,
+nota3 int(11) NOT NULL,
+notaFinal int(11) NOT NULL,
+PRIMARY KEY (listId),
+KEY cId (cId),
+KEY sId (sId),
+KEY tId (tId),
+CONSTRAINT list_ibfk_1 FOREIGN KEY (sId) REFERENCES student (sId),
+CONSTRAINT list_ibfk_2 FOREIGN KEY (cId) REFERENCES course (cId),
+CONSTRAINT list_ibfk_3 FOREIGN KEY (tId) REFERENCES teacher (tId),
