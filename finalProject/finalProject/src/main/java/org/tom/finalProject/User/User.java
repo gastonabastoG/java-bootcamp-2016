@@ -1,5 +1,9 @@
 package org.tom.finalProject.User;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Entity;
 import org.tom.finalProject.BaseEntity;
 import org.tom.finalProject.Article.Article;
@@ -8,13 +12,19 @@ import org.tom.finalProject.Cart.Cart;
 @Entity
 public class User extends BaseEntity implements UserAPI{
 	
+	@Embedded
 	private Cart userCart;
+	
 	private float credits;
 	private String username, password;
 	
 	
-	public User(String username, String password){
-		this.setPassword(password);
+	public User(String username, String password) throws NoSuchAlgorithmException{
+		//hashing password for security measures
+		MessageDigest crypto = MessageDigest.getInstance("SHA-256");
+		crypto.update(password.getBytes());
+		
+		this.setPassword(crypto.digest().toString());
 		this.setUsername(username);
 		this.credits = 0;
 	}
