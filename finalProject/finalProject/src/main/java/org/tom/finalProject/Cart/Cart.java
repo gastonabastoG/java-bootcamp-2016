@@ -9,7 +9,7 @@ import org.tom.finalProject.Article.Article;
 public class Cart implements CartAPI{
 
 	public List<Article> cartArticles;
-	public float totalPrice;
+	public Double totalPrice;
 
 	public void addToCart(Article article){
 		totalPrice =+ article.getPrice();
@@ -21,11 +21,11 @@ public class Cart implements CartAPI{
 		cartArticles.remove(article);
 	}
 
-	public float getTotalPrice() {
+	public Double getTotalPrice() {
 		return totalPrice;
 	}
 
-	public void setTotalPrice(float totalPrice) {
+	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
 	};
 	

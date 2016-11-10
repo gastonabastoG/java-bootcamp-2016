@@ -1,5 +1,6 @@
 package org.tom.finalProject.User;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -14,25 +15,29 @@ public class User extends BaseEntity implements UserAPI{
 	
 	@Embedded
 	private Cart userCart;
-	
-	private float credits;
+
 	private String username, password;
+
+	private Double credits;
 	
-	
-	public User(String username, String password) throws NoSuchAlgorithmException{
-		//hashing password for security measures
-		MessageDigest crypto = MessageDigest.getInstance("SHA-256");
-		crypto.update(password.getBytes());
-		
-		this.setPassword(crypto.digest().toString());
-		this.setUsername(username);
-		this.credits = 0;
+	public Cart getUserCart() {
+		return userCart;
 	}
 
-	public User(String username, String password, float creds){
-		this.setPassword(password);
-		this.setUsername(username);
-		this.credits = creds;
+	public void setUserCart(Cart userCart) {
+		this.userCart = userCart;
+	}
+
+	public Double getCredits() {
+		return credits;
+	}
+
+	public void setCredits(Double credits) {
+		this.credits = credits;
+	}
+	
+	public User(){
+		this.credits = 0.00;
 	}
 	
 	public String getUsername() {
@@ -47,8 +52,10 @@ public class User extends BaseEntity implements UserAPI{
 		return password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+		//MessageDigest crypto = MessageDigest.getInstance("SHA-256");
+		//crypto.update(password.getBytes("UTF-8"));
+		this.password = password;//crypto.digest().toString();
 	}
 
 	public void addItem(Article item){
@@ -63,7 +70,7 @@ public class User extends BaseEntity implements UserAPI{
 		credits =- userCart.getTotalPrice();
 	}
 	
-	public void chargeCreds(float cred){
+	public void chargeCreds(Double cred){
 		credits =+ cred;
 	}
 

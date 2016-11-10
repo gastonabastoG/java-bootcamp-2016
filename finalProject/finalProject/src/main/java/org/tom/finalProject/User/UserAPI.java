@@ -7,6 +7,6 @@ public interface UserAPI {
 	public void addItem(Article item);
 	public void removeItem(Article item);
 	public void buyCart();
-	public void chargeCreds(float cred);
+	public void chargeCreds(Double cred);
 	
 }

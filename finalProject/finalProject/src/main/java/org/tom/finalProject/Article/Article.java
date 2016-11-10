@@ -1,20 +1,30 @@
 package org.tom.finalProject.Article;
 
+import org.tom.finalProject.BaseEntity;
 
-public class Article {
+public class Article extends BaseEntity {
 
-	private float price;
-	private String name;
+	private Double price;
+	private String name,category;
 	
-	public Article(String name, float price){
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	/*/public Article(String name, Double price, String category){
 		this.setPrice(price);
 		this.setName(name);
-	}
+		this.setCategory(category);
+	}*/
 	
-	public float getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(float price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String getName() {
